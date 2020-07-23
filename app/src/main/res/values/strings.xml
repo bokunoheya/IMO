@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Project IMO</string>
+    <string name="title_home">Home</string>
+    <string name="title_company">Company</string>
+    <string name="title_rating">Rating</string>
+    <string name="title_subject_one">Subject One</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="subject_name">Наименование дисциплины</string>
+</resources>
