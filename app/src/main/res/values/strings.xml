@@ -12,4 +12,6 @@
     <string name="attendance">Посещяемость</string>
     <string name="homework">Д/З</string>
     <string name="result">Итого</string>
+    <string name="goal">Еженедельная цель</string>
+    <string name="leader">Лидер недели</string>
 </resources>
