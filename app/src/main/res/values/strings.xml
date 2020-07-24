@@ -6,4 +6,10 @@
     <string name="title_subject_one">Subject One</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="subject_name">Наименование дисциплины</string>
+    <string name="tasks">Задачи</string>
+    <string name="coins">Коины</string>
+    <string name="progress">Успеваемость</string>
+    <string name="attendance">Посещяемость</string>
+    <string name="homework">Д/З</string>
+    <string name="result">Итого</string>
 </resources>

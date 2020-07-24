@@ -18,15 +18,16 @@ import androidx.navigation.Navigation;
 import com.example.projectimo.R;
 
 public class HomeFragment extends Fragment {
-    ImageButton imageButton;
+    Button imageButton;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        imageButton= root.findViewById(R.id.imageButton);
-        imageButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.subjectOne));
+        imageButton= root.findViewById(R.id.button);
+        imageButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.blankFragment, null));
+
         return root;
     }
 }

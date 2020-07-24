@@ -9,12 +9,7 @@
         android:id="@+id/navigation_home"
         android:name="com.example.projectimo.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_navigation_home_to_subjectOne"
-            app:destination="@id/subjectOne"
-            app:launchSingleTop="true" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_company"
@@ -36,4 +31,9 @@
         android:id="@+id/mainActivity"
         android:name="com.example.projectimo.MainActivity"
         android:label="MainActivity" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.projectimo.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
 </navigation>

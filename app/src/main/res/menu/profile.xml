@@ -7,4 +7,9 @@
         android:icon="@drawable/icon_profile"
         android:title="@string/title_home"
         app:showAsAction="always"/>
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/icon_home"
+        android:title="@string/title_home"
+        app:showAsAction="always"/>
 </menu>
