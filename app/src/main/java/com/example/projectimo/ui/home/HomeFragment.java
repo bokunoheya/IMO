@@ -18,8 +18,7 @@ import androidx.navigation.Navigation;
 import com.example.projectimo.R;
 
 public class HomeFragment extends Fragment {
-    Button imageButton;
-
+    Button imageButton, button2, button3;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -27,7 +26,10 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         imageButton= root.findViewById(R.id.button);
         imageButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.blankFragment, null));
-
+        button2= root.findViewById(R.id.button2);
+        button2.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.type1, null));
+        button3= root.findViewById(R.id.button3);
+        button3.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.type2, null));
         return root;
     }
 }

@@ -1,19 +1,18 @@
 package com.example.projectimo;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class BlankFragment extends Fragment {
+import androidx.fragment.app.Fragment;
+
+public class Type2 extends Fragment {
     TextView progress, attendance, homework, result;
-    int pValue=1; //Успеваемость
-    int aValue=2; //Посещяемость
-    int hValue=3; //Д/З
+    int pValue=4; //Успеваемость
+    int aValue=3; //Посещяемость
+    int hValue=6; //Д/З
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
