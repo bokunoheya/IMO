@@ -9,13 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class SubjectOne extends Fragment {
+public class Profile extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_subject_one, container, false);
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 }

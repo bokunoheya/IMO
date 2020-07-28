@@ -4,11 +4,10 @@
     <item
         android:id="@+id/coins"
         android:icon="@drawable/icon_coin"
-        android:menuCategory="system"
-        android:title="@string/title_home"
+        android:title="@string/tasks"
         app:showAsAction="always|withText" />
     <item
-        android:id="@+id/subjectOne"
+        android:id="@+id/loginFragment"
         android:icon="@drawable/icon_profile"
         android:title="@string/title_home"
         app:showAsAction="always"/>

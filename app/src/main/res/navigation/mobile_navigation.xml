@@ -23,10 +23,10 @@
         android:label="@string/title_rating"
         tools:layout="@layout/fragment_rating" />
     <fragment
-        android:id="@+id/subjectOne"
-        android:name="com.example.projectimo.SubjectOne"
-        android:label="@string/title_subject_one"
-        tools:layout="@layout/fragment_subject_one" />
+        android:id="@+id/profile"
+        android:name="com.example.projectimo.Profile"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.projectimo.MainActivity"
@@ -44,4 +44,24 @@
         android:id="@+id/type2"
         android:name="com.example.projectimo.Type2"
         android:label="Type2" />
+    <fragment
+        android:id="@+id/coins"
+        android:name="com.example.projectimo.Coins"
+        android:label="@string/coinsName"
+        tools:layout="@layout/fragment_coins" />
+    <fragment
+        android:id="@+id/nav_goal"
+        android:name="com.example.projectimo.NavGoal"
+        android:label="@string/navGoal"
+        tools:layout="@layout/fragment_nav_goal" />
+    <fragment
+        android:id="@+id/nav_leader"
+        android:name="com.example.projectimo.NavLeader"
+        android:label="@string/navLeader"
+        tools:layout="@layout/fragment_nav_leader" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.projectimo.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>

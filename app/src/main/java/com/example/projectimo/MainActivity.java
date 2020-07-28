@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_company, R.id.navigation_rating)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment); //Навигация BottomView
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 /*
@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        NavigationUI.onNavDestinationSelected(item, navController2);
-        if(item.getItemId() ==android.R.id.home){
+        NavigationUI.onNavDestinationSelected(item, navController2); // Навигация Menu Toolbar
+        if(item.getItemId() ==android.R.id.home){ //Нажата Назад = Переход в Home
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
