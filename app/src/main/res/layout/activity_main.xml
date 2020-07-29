@@ -15,7 +15,7 @@
         android:minHeight="?attr/actionBarSize"
         android:scrollbarAlwaysDrawHorizontalTrack="false"
         android:scrollbarAlwaysDrawVerticalTrack="false"
-        android:theme="?attr/actionBarTheme"
+        app:titleTextAppearance="@style/ToolbarTheme"
         app:layout_constraintBottom_toBottomOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

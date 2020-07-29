@@ -34,16 +34,16 @@
     <fragment
         android:id="@+id/blankFragment"
         android:name="com.example.projectimo.BlankFragment"
-        android:label="fragment_blank"
+        android:label="@string/subject_name"
         tools:layout="@layout/fragment_blank" />
     <fragment
         android:id="@+id/type1"
         android:name="com.example.projectimo.Type1"
-        android:label="Type1" />
+        android:label="@string/subject_name" />
     <fragment
         android:id="@+id/type2"
         android:name="com.example.projectimo.Type2"
-        android:label="Type2" />
+        android:label="@string/subject_name" />
     <fragment
         android:id="@+id/coins"
         android:name="com.example.projectimo.Coins"
@@ -62,6 +62,15 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.projectimo.ui.login.LoginFragment"
-        android:label="fragment_login"
+        android:label="@string/AR"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/attendance"
+        android:name="com.example.projectimo.Attendance"
+        android:label="@string/attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/progress"
+        android:name="com.example.projectimo.Progress"
+        android:label="@string/progress" />
 </navigation>
