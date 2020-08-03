@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "41567142130",
+    "firebase_url": "https://it-tiwrno.firebaseio.com",
+    "project_id": "it-tiwrno",
+    "storage_bucket": "it-tiwrno.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41567142130:android:4b7ce622e411facb88106b",
+        "android_client_info": {
+          "package_name": "com.example.projectimo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41567142130-rq6qdhijveqsspfe8g24knpfr0uqn1dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnR2SOlOTxN1gayVqqEjqG6RbNwvrN95A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41567142130-t79hj84b6t85u6gvfsgrhr7utrjatdkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

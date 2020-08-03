@@ -7,7 +7,7 @@
         android:title="@string/tasks"
         app:showAsAction="always|withText" />
     <item
-        android:id="@+id/loginFragment"
+        android:id="@+id/profile"
         android:icon="@drawable/icon_profile"
         android:title="@string/title_home"
         app:showAsAction="always"/>
