@@ -14,7 +14,9 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-
+import static com.example.projectimo.UserData.mUsEmail;
+import static com.example.projectimo.UserData.mUsId;
+import static com.example.projectimo.UserData.mUsName;
 
 
 public class Profile extends Fragment {
@@ -26,14 +28,14 @@ TextView getText;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View root= inflater.inflate(R.layout.fragment_profile, container, false);
-        button4=root.findViewById(R.id.button4);
         getText=root.findViewById(R.id.get_text);
-        /*getText.setText(ARG_POSITION);*/
-        /*Bundle bundle = getIntent().getExtras();*/
-        /*String title = bundle.getString("key_1");*/
-        /*getText.setText(new Login().intent.getExtras().getString("email"));*/
+        /*-------------------------------------*/
+        UserData.Vf();
+        getText.setText(mUsName); //Вывод эл. почты
+        /*-------------------------------------*/
+        button4=root.findViewById(R.id.button4);
+
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,8 +44,6 @@ TextView getText;
                 Toast.makeText(getActivity(),"Exit", Toast.LENGTH_SHORT).show();
             }
         });
-
-
         return root;
     }
 }

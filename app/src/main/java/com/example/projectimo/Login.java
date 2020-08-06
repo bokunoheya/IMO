@@ -3,8 +3,6 @@ package com.example.projectimo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.LauncherActivity;
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,14 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -27,7 +23,6 @@ public class Login extends AppCompatActivity {
     Button mLogin;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
-    public String name;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,24 +33,11 @@ public class Login extends AppCompatActivity {
         mLogin=findViewById(R.id.loginBtn);
         fAuth = FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-
-        if (user != null)
-        {
-            String e = user.getEmail();
-            name = user.getDisplayName();
-            Bundle bundle = new Bundle();
-            bundle.putString("message", e );
-
-        }
 
         if(fAuth.getCurrentUser()!=null){
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
-
-
 
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,10 +75,3 @@ public class Login extends AppCompatActivity {
 
 
 }
-   /* Bundle bundle = new Bundle();
-String myMessage = "Stackoverflow is cool!";
-    bundle.putString("message", myMessage );
-    FragmentClass fragInfo = new FragmentClass();
-    fragInfo.setArguments(bundle);
-    transaction.replace(R.id.fragment_single, fragInfo);
-    transaction.commit();*/

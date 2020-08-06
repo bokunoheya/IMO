@@ -3,8 +3,6 @@
     <string name="title_home">Главное</string>
     <string name="title_company">Компании</string>
     <string name="title_rating">Рейтинг</string>
-    <string name="title_subject_one">Subject One</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="subject_name">Наименование дисциплины</string>
     <string name="tasks">Задачи</string>
     <string name="coins">Коины</string>
@@ -18,20 +16,24 @@
     <string name="navGoal">Еженедельная цель</string>
     <string name="coinsName">Коины</string>
     <string name="profile">Профиль</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Эл/почта</string>
-    <string name="prompt_password">Пароль</string>
-    <string name="action_sign_in">Вход/Регистрация</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
     <string name="studentName">ФИО студента</string>
     <string name="number">Оценки</string>
     <string name="FIO">ФИО</string>
     <string name="N">№</string>
     <string name="date">Дата</string>
     <string name="dateChange">Выберите дату</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Эл/почта</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Вход/Регистрация</string>
     <string name="AR">Авторизация</string>
+    <string name="userName">Введите имя</string>
+    <string name="userEmail">Введите эл/почту</string>
+    <string name="userPassword">Пароль</string>
+    <string name="userPhone">Телефон</string>
+    <string name="haveAcount">Есть аккаунт</string>
+    <string name="register">Регистрация</string>
+    <string name="login">Войти</string>
+    <string name="logout">Выйти</string>
+    <string name="addCoins">Добавить коины</string>
 </resources>

@@ -16,12 +16,24 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static android.view.View.INVISIBLE;
 
 public class Register extends AppCompatActivity {
-EditText mFullName, mEmail, mPassword,mPhone;
+    static EditText mFullName;
+    EditText mEmail;
+    EditText mPassword;
+    EditText mPhone;
 Button mRegister;
 FirebaseAuth fAuth;
 ProgressBar progressBar;
+    static FirebaseDatabase database = FirebaseDatabase.getInstance();
+    static DatabaseReference myRef = database.getReference("Name");
+    DatabaseReference myRef2 = database.getReference("Phone");
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +71,8 @@ ProgressBar progressBar;
                     return;
                 }
                 progressBar.setVisibility(view.VISIBLE);
-
+                myRef.setValue(mFullName.getText().toString().trim());
+                myRef2.setValue(mPhone.getText().toString().trim());
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -68,6 +81,7 @@ ProgressBar progressBar;
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         }else{
                             Toast.makeText(Register.this,"Error: "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(INVISIBLE);
                         }
                     }
                 });
