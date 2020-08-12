@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.Sampler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +17,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.snapshot.ValueIndex;
 
 import static android.view.View.INVISIBLE;
 
@@ -26,13 +32,13 @@ public class Register extends AppCompatActivity {
     EditText mEmail;
     EditText mPassword;
     EditText mPhone;
+    static String m;
 Button mRegister;
 FirebaseAuth fAuth;
 ProgressBar progressBar;
     static FirebaseDatabase database = FirebaseDatabase.getInstance();
     static DatabaseReference myRef = database.getReference("Name");
     DatabaseReference myRef2 = database.getReference("Phone");
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +79,21 @@ ProgressBar progressBar;
                 progressBar.setVisibility(view.VISIBLE);
                 myRef.setValue(mFullName.getText().toString().trim());
                 myRef2.setValue(mPhone.getText().toString().trim());
+
+                myRef.child("it-tiwrno").child("Name").addValueEventListener(new ValueEventListener() {
+                                                                                  @Override
+                                                                                  public void onDataChange(DataSnapshot snapshot){
+                                                                                      if (snapshot.getValue() != null) {
+                                                                                          String n = (String) snapshot.getValue();
+                                                                                          m=n;
+                                                                                      }
+                                                                                  }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -92,5 +113,4 @@ ProgressBar progressBar;
     public void Click(View view) {
         startActivity(new Intent(getApplicationContext(),Login.class));
     }
-
 }

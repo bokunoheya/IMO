@@ -1,5 +1,6 @@
 package com.example.projectimo;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,7 @@ public class BlankFragment extends Fragment {
     int pValue=1; //Успеваемость
     int aValue=2; //Посещяемость
     int hValue=3; //Д/З
+    @SuppressLint("ResourceAsColor")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

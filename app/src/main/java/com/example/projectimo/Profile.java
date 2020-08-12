@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import static com.example.projectimo.Register.m;
 import static com.example.projectimo.UserData.mUsEmail;
 import static com.example.projectimo.UserData.mUsId;
 import static com.example.projectimo.UserData.mUsName;
@@ -32,7 +33,9 @@ TextView getText;
         getText=root.findViewById(R.id.get_text);
         /*-------------------------------------*/
         UserData.Vf();
-        getText.setText(mUsName); //Вывод эл. почты
+
+
+        getText.setText(mUsEmail); //Вывод эл. почты
         /*-------------------------------------*/
         button4=root.findViewById(R.id.button4);
 
